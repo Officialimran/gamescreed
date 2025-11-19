@@ -204,10 +204,10 @@
         <div class="w-full">
 
             <!-- GRID -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:border-b border-[#DEDEDE]">
 
                 <!-- LEFT CONTENT (FIXED col-span) -->
-                <div class="col-span-1 lg:col-span-2 md:border-r md:border-[D0D0D0] border-0 md:pr-6 mb-6">
+                <div class="col-span-1 lg:col-span-2 lg:border-r lg:border-[D0D0D0] border-b lg:border-b-0 md:pr-6 mb-6">
                     <div class="relative">
 
                         <!-- TAGS ROW -->
@@ -299,47 +299,41 @@
                                         <p class="text-[#111D2C] text-[16px] lg:text-[16px] leading-6 font-oxygen font-normal">Sollicitudin nisl porttitor velit fermentum condimentum luctus. Pretium tempus gravida proin diam donec felis vitae. Mattis a egestas nullam risus tortor non. At purus quis egestas justo tincidunt. In enim ut duis dictum id. Diam turpis mi nunc leo lorem tellus volutpat. Urna quis sed tristique ultricies quis imperdiet aenean vulputate. Id ut condimentum egestas massa fringilla vulputate egestas nulla aliquam. Vestibulum pharetra habitant eget vitae sit hendrerit consectetur. Risus consequat ullamcorper non at et in lectus bibendum.</p>
                                       
                                     </div>
-                                    <div class="flex flex-col space-y-6">
+                                    <div class="flex flex-col items-start space-y-4">
+                                        <div class="flex items-center gap-2">
+                                            <div class="flex gap-2">
+                                                <img src="assets/img/social/share.svg" /> 
+                                                <span class="text-[#111D2C] text-sm font-oxygen font-bold leading-5">Share this article:</span>
+                                            </div>
+                                            <div class="flex gap-2">
+                                                <a href="#"><img src="assets/img/social/fb-red.svg" /></a>
+                                                <a href="#"><img src="assets/img/social/x-red.svg" /></a>
+                                                <a href="#"><img src="assets/img/social/insta-red.svg" /></a>
+                                                <a href="#"><img src="assets/img/social/yt-red.svg" /></a>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row items-start space-x-6 md:space-x-2">
+                                          <div class="flex gap-2">
+                                              <img src="assets/img/social/tag.svg" /> 
+                                              <span class="text-[#111D2C] text-sm font-oxygen font-bold leading-5">Tags:</span>
+                                          </div>
 
-    <!-- Share section -->
-    <div class="flex flex-col md:flex-row md:items-center md:gap-6 gap-3">
+                                          <div class="flex flex-wrap items-center gap-2">
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag1,</a>
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag2,</a> 
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag3,</a> 
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag4,</a>
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag5,</a> 
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag6,</a> 
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag7,</a> 
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag8,</a>
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag9,</a> 
+                                              <a href="#" class="text-[#111D2C] text-sm font-encode font-medium leading-6">Tag10</a>
+                                          </div>
+                                      </div>
 
-        <div class="flex items-center gap-3">
-            <img src="assets/img/social/share.svg">
-            <span class="text-lg font-semibold">Share this article:</span>
-        </div>
+                                    </div>
 
-        <div class="flex gap-3 text-red-600 text-xl">
-            <a href="#"><img src="assets/img/social/fb-red.svg"></a>
-            <a href="#"><img src="assets/img/social/x-red.svg"></a>
-            <a href="#"><img src="assets/img/social/insta-red.svg"></a>
-            <a href="#"><img src="assets/img/social/yt-red.svg"></a>
-        </div>
-    </div>
-
-    <!-- Tags section -->
-    <div class="flex flex-col md:flex-row md:items-center md:gap-6 gap-3">
-
-        <div class="flex items-center gap-3">
-            <img src="assets/img/social/tag.svg">
-            <span class="text-lg font-semibold">Tags:</span>
-        </div>
-
-        <div class="flex flex-wrap gap-2 md:gap-3">
-            <a href="#">Tag1,</a>
-            <a href="#">Tag2,</a>
-            <a href="#">Tag3,</a>
-            <a href="#">Tag4,</a>
-            <a href="#">Tag5,</a>
-            <a href="#">Tag6,</a>
-            <a href="#">Tag7,</a>
-            <a href="#">Tag8,</a>
-            <a href="#">Tag9,</a>
-            <a href="#">Tag10</a>
-        </div>
-
-    </div>
-</div>
 
                                   </div>
 
@@ -357,7 +351,7 @@
                 </div>
 
                 <!-- SIDEBAR -->
-                <div class="col-span-1">
+                <div class="col-span-1 hidden md:block">
 
                     <div class="pb-4">
                         <a href="#">
@@ -394,7 +388,7 @@
 
                         <!-- CARD 2 -->
                         <div class="relative overflow-hidden justify-between">
-                            <img src="assets/img/card/card-2.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+                            <img src="assets/img/card/card-3.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
 
                             <div class="absolute top-4 px-4 text-white flex items-center gap-2">
                                 <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
@@ -402,7 +396,7 @@
 
                             <div class="py-4">
                                 <a href="#">
-                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-encode font-bold leading-[24px]">
+                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
                                         Mus luctus tincidunt sit proinurpis gravida tempor leo.
                                     </h2>
                                 </a>
@@ -416,8 +410,8 @@
                         </div>
 
                         <!-- CARD 3 -->
-                        <div class="relative overflow-hidden">
-                            <img src="assets/img/card/card-3.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+                        <div class="relative overflow-hidden justify-between">
+                            <img src="assets/img/card/card-2.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
 
                             <div class="absolute top-4 px-4 text-white flex items-center gap-2">
                                 <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
@@ -425,7 +419,7 @@
 
                             <div class="py-4">
                                 <a href="#">
-                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-encode font-bold leading-[24px]">
+                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
                                         Mus luctus tincidunt sit proinurpis gravida tempor leo.
                                     </h2>
                                 </a>
@@ -439,7 +433,99 @@
                         </div>
 
                         <!-- CARD 4 -->
-                        <div class="relative overflow-hidden">
+                        <div class="relative overflow-hidden justify-between">
+                            <img src="assets/img/card/card-1.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                            <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                                <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                            </div>
+
+                            <div class="py-4">
+                                <a href="#">
+                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                        Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                    </h2>
+                                </a>
+                                <div class="flex justify-between items-center mb-2">
+                                    <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                    <button class="text-[#111D2C]">
+                                        <img src="assets/img/card/comment-dark.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 5 -->
+                        <div class="relative overflow-hidden justify-between">
+                            <img src="assets/img/card/card-4.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                            <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                                <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                            </div>
+
+                            <div class="py-4">
+                                <a href="#">
+                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                        Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                    </h2>
+                                </a>
+                                <div class="flex justify-between items-center mb-2">
+                                    <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                    <button class="text-[#111D2C]">
+                                        <img src="assets/img/card/comment-dark.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 6 -->
+                        <div class="relative overflow-hidden justify-between">
+                            <img src="assets/img/card/card-3.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                            <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                                <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                            </div>
+
+                            <div class="py-4">
+                                <a href="#">
+                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                        Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                    </h2>
+                                </a>
+                                <div class="flex justify-between items-center mb-2">
+                                    <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                    <button class="text-[#111D2C]">
+                                        <img src="assets/img/card/comment-dark.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 7 -->
+                        <div class="relative overflow-hidden justify-between">
+                            <img src="assets/img/card/card-2.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                            <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                                <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                            </div>
+
+                            <div class="py-4">
+                                <a href="#">
+                                    <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                        Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                    </h2>
+                                </a>
+                                <div class="flex justify-between items-center mb-2">
+                                    <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                    <button class="text-[#111D2C]">
+                                        <img src="assets/img/card/comment-dark.svg">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 8 -->
+                        <div class="relative overflow-hidden justify-between">
                             <img src="assets/img/card/card-1.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
 
                             <div class="absolute top-4 px-4 text-white flex items-center gap-2">
@@ -470,6 +556,479 @@
         </div>
     </div>
 </section>
+
+<section class="w-full">
+    <div class="2xl:px-[4vw] lg:px-[4vw] px-4 md:px-4 py-6">
+        <h2 class="text-[#111D2C] font-encode font-semibold text-[20px] lg:text-[30px] mb-4">
+          Related News
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="relative overflow-hidden">
+                <img
+                    src="assets/img/card/card-4.png"
+                    alt="Game"
+                    class="w-full h-[214px] rounded-lg md:h-56 object-cover"
+                />
+                <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                    <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                    <span
+                        class="bg-[#374151] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/pc.svg" class="w-4 h-4" /> PC
+                    </span>
+                    <span
+                        class="bg-[#E60012] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/nintendo.svg" class="w-4 h-4" />
+                    </span>
+                    <span
+                        class="bg-[#107C10] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/xbox.svg" class="w-4 h-4" />
+                    </span>
+                    <span
+                        class="bg-[#0071D1] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1 group-hover:bg-red-700 transition-colors"
+                    >
+                        <img
+                            src="assets/img/card/play.svg"
+                            class="w-4 h-4 group-hover:filter group-hover:invert transition-all"
+                        />
+                    </span>
+                </div>
+                <div class="text-white py-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
+                        <div class="flex">
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h3
+                            class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors"
+                        >
+                            Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                        </h3>
+                    </a>
+                    <div class="flex justify-between items-center mb-2">
+                        <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">
+                            Writer Name
+                            <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span>
+                        </p>
+                        <button class="text-[#111D2C]">
+                            <img src="assets/img/card/comment-dark.svg" class="text-[#111D2C]" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img
+                    src="assets/img/card/card-4.png"
+                    alt="Game"
+                    class="w-full h-[214px] rounded-lg md:h-56 object-cover"
+                />
+                <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                    <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                    <span
+                        class="bg-[#374151] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/pc.svg" class="w-4 h-4" /> PC
+                    </span>
+                    <span
+                        class="bg-[#E60012] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/nintendo.svg" class="w-4 h-4" />
+                    </span>
+                    <span
+                        class="bg-[#107C10] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/xbox.svg" class="w-4 h-4" />
+                    </span>
+                    <span
+                        class="bg-[#0071D1] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1 group-hover:bg-red-700 transition-colors"
+                    >
+                        <img
+                            src="assets/img/card/play.svg"
+                            class="w-4 h-4 group-hover:filter group-hover:invert transition-all"
+                        />
+                    </span>
+                </div>
+                <div class="text-white py-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
+                        <div class="flex">
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h3
+                            class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors"
+                        >
+                            Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                        </h3>
+                    </a>
+                    <div class="flex justify-between items-center mb-2">
+                        <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">
+                            Writer Name
+                            <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span>
+                        </p>
+                        <button class="text-[#111D2C]">
+                            <img src="assets/img/card/comment-dark.svg" class="text-[#111D2C]" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="relative overflow-hidden">
+                <img
+                    src="assets/img/card/card-4.png"
+                    alt="Game"
+                    class="w-full h-[214px] rounded-lg md:h-56 object-cover"
+                />
+                <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                    <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                    <span
+                        class="bg-[#374151] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/pc.svg" class="w-4 h-4" /> PC
+                    </span>
+                    <span
+                        class="bg-[#E60012] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/nintendo.svg" class="w-4 h-4" />
+                    </span>
+                    <span
+                        class="bg-[#107C10] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1"
+                    >
+                        <img src="assets/img/card/xbox.svg" class="w-4 h-4" />
+                    </span>
+                    <span
+                        class="bg-[#0071D1] text-sm font-bold font-oxygen py-[6px] px-2 -skew-x-12 flex items-center gap-1 group-hover:bg-red-700 transition-colors"
+                    >
+                        <img
+                            src="assets/img/card/play.svg"
+                            class="w-4 h-4 group-hover:filter group-hover:invert transition-all"
+                        />
+                    </span>
+                </div>
+                <div class="text-white py-4">
+                    <div class="flex items-center mb-2">
+                        <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
+                        <div class="flex">
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h3
+                            class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors"
+                        >
+                            Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                        </h3>
+                    </a>
+                    <div class="flex justify-between items-center mb-2">
+                        <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">
+                            Writer Name
+                            <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span>
+                        </p>
+                        <button class="text-[#111D2C]">
+                            <img src="assets/img/card/comment-dark.svg" class="text-[#111D2C]" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+           
+            
+        </div>
+
+       
+    </div>
+</section>
+
+
+
+  <section class="mobile-sidebar relative pt-10 block md:hidden">
+    <div class="2xl:px-[4vw] lg:px-[4vw] px-4">
+        <div class="w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 border-b border-[#DEDEDE]">
+                <div class="col-span-1">
+
+                  <div class="pb-4">
+                      <a href="#">
+                          <img src="assets/img/ads.png" class="w-full h-[149px] lg:h-auto object-cover">
+                      </a>
+                  </div>
+
+                  <h2 class="text-[#111D2C] font-encode font-bold text-[20px] lg:text-[30px] mb-4">Trending Stories</h2>
+
+                  <div class="grid grid-cols-2 lg:grid-cols-2 gap-6">
+
+                      <!-- CARD 1 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-4.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 2 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-3.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 3 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-2.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 4 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-1.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 5 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-4.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 6 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-3.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 7 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-2.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- CARD 8 -->
+                      <div class="relative overflow-hidden justify-between">
+                          <img src="assets/img/card/card-1.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
+
+                          <div class="absolute top-4 px-4 text-white flex items-center gap-2">
+                              <span class="bg-[#2E6EB5] text-sm font-bold font-oxygen py-1 px-2 -skew-x-12">Review</span>
+                          </div>
+
+                          <div class="py-4">
+                              <a href="#">
+                                  <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px]">
+                                      Mus luctus tincidunt sit proinurpis gravida tempor leo.
+                                  </h2>
+                              </a>
+                              <div class="flex justify-between items-center mb-2">
+                                  <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
+                                  <button class="text-[#111D2C]">
+                                      <img src="assets/img/card/comment-dark.svg">
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div> <!-- grid end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  
+
 
   
 
