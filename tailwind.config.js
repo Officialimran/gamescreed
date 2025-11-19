@@ -3,9 +3,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        encode: ['"Encode Sans"', 'sans-serif'],
-        oxygen: ['Oxygen', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        encode: ['Encode'],
+        oxygen: ['Oxygen'],
+        inter: ['Inter'],
       },
     },
   },

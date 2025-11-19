@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-[#111D2C] p-6">
+
+    <div class="w-full max-w-3xl mx-auto border-t pt-6">
+
+        <!-- MAIN ACCORDION (DEFAULT OPEN) -->
+        <button onclick="toggleMain('acc1')"
+            class="w-full flex items-center justify-between py-3 text-left">
+            <span class="text-xl font-semibold">Contents</span>
+
+            <svg id="icon-acc1"
+                class="w-5 h-5 transition-transform duration-300 rotate-180"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </button>
+
+        <!-- ACCORDION ITEMS (DEFAULT OPEN) -->
+        <div id="content-acc1" class="mt-3 space-y-3">
+
+            <a href="#" onclick="toggleNested('nest1'); return false;"
+               class="block font-semibold active-link text-[#E63946]"
+               id="link-nest1">
+               Steering Clear of Common AI Writing Pitfalls
+            </a>
+
+            <a href="#" onclick="toggleNested('nest2'); return false;"
+               class="block font-semibold"
+               id="link-nest2">
+               Understanding ChatGPT Capabilities - Define Your Style
+            </a>
+
+            <!-- NESTED CONTENT 1 (DEFAULT OPEN) -->
+            <div id="nested-nest1" class="mt-3 space-y-3">
+                <h3>Faucibus praesent vitae tellus enim</h3>
+                <p>Adipiscing urna gravida egestas elit dolor ut sodales vestibulum cursus. Habitant vestibulum scelerisque elit ultrices nec pretium urna iaculis. Nunc etiam egestas nisi facilisi facilisis. Urna pharetra molestie ut adipiscing amet tincidunt ultricies nibh. At tristique consectetur urna cursus praesent dignissim. Sollicitudin pellentesque nunc convallis gravida dignissim massa adipiscing. Pulvinar purus enim ut laoreet tortor maecenas turpis purus nunc. Risus ultricies varius est vitae egestas. Vitae purus vitae metus id sed in blandit amet. Risus ullamcorper sed eget enim quis tortor arcu.</p>
+                <p>Augue egestas ultricies aliquam sagittis platea convallis. Ante aliquam faucibus iaculis dolor placerat eu viverra tortor enim. Massa mauris in duis consequat. Quam nulla volutpat eget nibh vitae lobortis diam tristique. Pellentesque lorem eget et nibh dictum. Ultrices sed dui in lacus feugiat neque donec mauris molestie. Dolor sed dignissim neque purus imperdiet purus scelerisque suspendisse. Dolor elementum in dui vel augue dolor sed.</p>
+            </div>
+
+            <!-- NESTED CONTENT 2 (HIDDEN) -->
+            <div id="nested-nest2" class="mt-3 space-y-3 hidden">
+                <p>Heading Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JS -->
+
+    <!-- MAIN ACCORDION (ALREADY DEFAULT OPEN) -->
+    <script>
+        function toggleMain(id) {
+            const content = document.getElementById("content-" + id);
+            const icon = document.getElementById("icon-" + id);
+
+            content.classList.toggle("hidden");
+            icon.classList.toggle("rotate-180");
+        }
+    </script>
+
+    <!-- NESTED ACCORDION -->
+    <script>
+        function toggleNested(id) {
+
+            // 🔹 Close all nested content
+            const allNested = document.querySelectorAll("[id^='nested-nest']");
+            allNested.forEach(n => n.classList.add("hidden"));
+
+            // 🔹 Remove active red class from all links
+            const allLinks = document.querySelectorAll("[id^='link-nest']");
+            allLinks.forEach(l => {
+                l.classList.remove("text-[#E63946]", "font-semibold");
+            });
+
+            // 🔹 Show clicked nested section
+            const content = document.getElementById("nested-" + id);
+            content.classList.remove("hidden");
+
+            // 🔹 Add red active color to clicked link
+            const activeLink = document.getElementById("link-" + id);
+            activeLink.classList.add("text-[#E63946]", "font-bold");
+        }
+    </script>
+
+</body>
+</html>

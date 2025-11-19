@@ -21,9 +21,7 @@
       theme: {
         extend: {
           fontFamily: {
-            encode: ['Encode'],
-            oxygen: ['Oxygen'],
-            inter: ['Inter'],
+            encode: ['"Encode Sans"', 'sans-serif'],
           },
           keyframes: {
             'fade-in': {
@@ -44,16 +42,20 @@
 
 <div class="w-full shadow-md bg-[#111D2C] relative z-50">
 
+  <!-- HEADER -->
   <header class="flex items-center justify-between px-4 sm:px-5 md:px-6 lg:px-[4vw] py-4">
 
+    <!-- Logo -->
     <a href="#" class="text-xl font-bold">
-      <img src="assets/img/logo-light.png" alt="GamesCreed Logo" class="h-10 lg:h-[60px]">
+      <img src="assets/img/logo-light.png" alt="GamesCreed Logo" class="h-10">
     </a>
 
-    <nav class="hidden lg:flex md:space-x-2 lg:space-x-4 xl:space-x-6 text-white font-encode text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-medium relative">
+    <!-- DESKTOP MENU (1024px+) -->
+    <nav class="hidden lg:flex space-x-6 text-white font-encode text-[16px] md:text-[18px] lg:text-[20px] font-medium relative">
 
+      <!-- Platforms Dropdown -->
       <div class="relative group">
-        <button class="flex items-center gap-1">
+        <button class="hover:text-gray-200 flex items-center gap-1">
           Platforms
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:rotate-180"
             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,75 +64,23 @@
           </svg>
         </button>
 
-        <div class="absolute left-0 mt-6 w-48 bg-[#1B2A3B] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-2 text-[16px] md:text-[18px] lg:text-[24px] text-white hover:bg-[#2C3E55] hover:text-[#FC1F30]">Items One</a>
-          <a href="#" class="block px-4 py-2 text-[16px] md:text-[18px] lg:text-[24px] text-white hover:bg-[#2C3E55] hover:text-[#FC1F30]">Items Two</a>
+        <!-- Dropdown -->
+        <div class="absolute left-0 mt-4 w-48 bg-[#1B2A3B] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-2 text-[18px] text-white hover:bg-[#2C3E55]">Items One</a>
+          <a href="#" class="block px-4 py-2 text-[18px] text-white hover:bg-[#2C3E55]">Items Two</a>
         </div>
       </div>
-        <a href="#"
-        class="relative hover:text-[#FC1F30]
-                after:content-[''] after:absolute after:bottom-[-28px]
-                after:left-1/2 after:-translate-x-1/2
-                after:w-0 hover:after:w-full
-                after:h-[3px] after:bg-[#FC1F30]
-                after:transition-all after:duration-300 after:ease-out">
-        News
-        </a>
 
-        <a href="#"
-        class="relative hover:text-[#FC1F30]
-                after:content-[''] after:absolute after:bottom-[-28px]
-                after:left-1/2 after:-translate-x-1/2
-                after:w-0 hover:after:w-full
-                after:h-[3px] after:bg-[#FC1F30]
-                after:transition-all after:duration-300 after:ease-out">
-        Reviews
-        </a>
+      <a href="#" class="hover:text-gray-200">News</a>
+      <a href="#" class="hover:text-gray-200">Reviews</a>
+      <a href="#" class="hover:text-gray-200">Blogs</a>
+      <a href="#" class="hover:text-gray-200">Anime</a>
+      <a href="#" class="hover:text-gray-200">Entertainment</a>
+      <a href="#" class="hover:text-gray-200">Trending</a>
 
-        <a href="#"
-        class="relative hover:text-[#FC1F30]
-                after:content-[''] after:absolute after:bottom-[-28px]
-                after:left-1/2 after:-translate-x-1/2
-                after:w-0 hover:after:w-full
-                after:h-[3px] after:bg-[#FC1F30]
-                after:transition-all after:duration-300 after:ease-out">
-        Blogs
-        </a>
-
-        <a href="#"
-        class="relative hover:text-[#FC1F30]
-                after:content-[''] after:absolute after:bottom-[-28px]
-                after:left-1/2 after:-translate-x-1/2
-                after:w-0 hover:after:w-full
-                after:h-[3px] after:bg-[#FC1F30]
-                after:transition-all after:duration-300 after:ease-out">
-        Anime
-        </a>
-
-        <a href="#"
-        class="relative hover:text-[#FC1F30]
-                after:content-[''] after:absolute after:bottom-[-28px]
-                after:left-1/2 after:-translate-x-1/2
-                after:w-0 hover:after:w-full
-                after:h-[3px] after:bg-[#FC1F30]
-                after:transition-all after:duration-300 after:ease-out">
-        Entertainment
-        </a>
-
-        <a href="#"
-        class="relative hover:text-[#FC1F30]
-                after:content-[''] after:absolute after:bottom-[-28px]
-                after:left-1/2 after:-translate-x-1/2
-                after:w-0 hover:after:w-full
-                after:h-[3px] after:bg-[#FC1F30]
-                after:transition-all after:duration-300 after:ease-out">
-        Trending
-        </a>
-
-
-     
     </nav>
 
+    <!-- RIGHT SIDE ICONS -->
     <div class="flex items-center space-x-3">
 
       <a href="#">
@@ -142,6 +92,7 @@
         <a href="#"><img src="assets/img/dark.png" width="24" height="24" alt="Dark Mode"></a>
       </div>
 
+      <!-- MOBILE/TABLET HAMBURGER (0–1023px) -->
       <button id="menuBtn" class="lg:hidden z-20">
         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -152,10 +103,11 @@
     </div>
   </header>
 
-
+  <!-- MOBILE/TABLET FULLSCREEN MENU (0–1023px) -->
   <div id="mobileMenu"
     class="fixed top-0 left-0 w-full h-full bg-[#111D2C] z-40 transform -translate-x-full transition-transform duration-300 lg:hidden flex flex-col">
 
+    <!-- Top Bar -->
     <div class="flex items-center justify-between px-4 py-4 border-b border-[#334459]">
       <img src="assets/img/logo-light.png" class="h-10">
 
@@ -167,8 +119,10 @@
       </button>
     </div>
 
+    <!-- Mobile Navigation -->
     <nav class="flex flex-col space-y-6 px-6 pt-8 text-white font-encode text-[20px] font-medium">
 
+      <!-- Mobile Dropdown -->
       <div class="w-full">
         <button id="platformsToggle" class="flex items-center justify-between w-full">
           Platforms
@@ -181,17 +135,17 @@
 
         <div id="platformsMenu"
           class="max-h-0 overflow-hidden transition-all duration-500 flex flex-col pl-4 mt-2 space-y-3">
-          <a href="#" class="hover:text-[#FC1F30]">Items One</a>
-          <a href="#" class="hover:text-[#FC1F30]">Items Two</a>
+          <a href="#" class="hover:text-gray-200">Items One</a>
+          <a href="#" class="hover:text-gray-200">Items Two</a>
         </div>
       </div>
 
-      <a href="#" class="hover:text-[#FC1F30]">News</a>
-      <a href="#" class="hover:text-[#FC1F30]">Reviews</a>
-      <a href="#" class="hover:text-[#FC1F30]">Blogs</a>
-      <a href="#" class="hover:text-[#FC1F30]">Anime</a>
-      <a href="#" class="hover:text-[#FC1F30]">Entertainment</a>
-      <a href="#" class="hover:text-[#FC1F30]">Trending</a>
+      <a href="#" class="hover:text-gray-200">News</a>
+      <a href="#" class="hover:text-gray-200">Reviews</a>
+      <a href="#" class="hover:text-gray-200">Blogs</a>
+      <a href="#" class="hover:text-gray-200">Anime</a>
+      <a href="#" class="hover:text-gray-200">Entertainment</a>
+      <a href="#" class="hover:text-gray-200">Trending</a>
 
     </nav>
   </div>
@@ -202,6 +156,8 @@
   
 <section class="w-full relative">
   <div class="px-4 sm:px-4 md:px-4 lg:px-[4vw] py-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- MAIN CARD (Left 2 Columns on Desktop) -->
     <div class="relative lg:col-span-2 rounded-lg overflow-hidden shadow-lg group">
 
       <img src="assets/img/card/card-1.png"
@@ -210,6 +166,7 @@
 
       <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
+      <!-- Top Tags -->
       <div class="absolute top-4 left-4 text-white flex flex-wrap items-center gap-2">
 
         <span class="bg-[#2E6EB5] text-xs sm:text-sm font-semibold px-3 py-1 -skew-x-12 rounded-sm">Review</span>
@@ -218,16 +175,18 @@
           <img src="assets/img/card/pc.svg" class="w-3 h-3"> PC
         </span>
 
-        <span class="bg-[#0071D1] px-2 py-[8px] -skew-x-12 rounded-sm flex items-center gap-1 group-hover:bg-red-700 transition">
+        <span class="bg-[#0071D1] px-2 py-[6px] -skew-x-12 rounded-sm flex items-center gap-1 group-hover:bg-red-700 transition">
           <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition">
         </span>
 
       </div>
 
+      <!-- Bottom Content -->
       <div class="absolute bottom-4 left-4 pr-4">
 
+        <!-- Rating -->
         <div class="flex items-center mb-2">
-          <span class="text-[#FFFFFF] text-lg sm:text-xl font-oxygen font-bold mr-2">4.5</span>
+          <span class="text-white text-lg sm:text-xl font-oxygen font-bold mr-2">4.5</span>
 
           <div class="flex">
             <svg class="w-4 h-4 sm:w-5 sm:h-5 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
@@ -238,8 +197,9 @@
           </div>
         </div>
 
+        <!-- Title -->
         <a href="#">
-          <h2 class="mb-4 text-[#FFFFFF] text-lg sm:text-xl md:text-2xl lg:text-[36px] leading-snug sm:leading-[34px] md:leading-[40px] lg:leading-[48px] font-semibold font-encode group-hover:text-[#FC1F30] transition">
+          <h2 class="mb-4 text-white text-lg sm:text-xl md:text-2xl lg:text-[36px] leading-snug sm:leading-[34px] md:leading-[40px] lg:leading-[48px] font-semibold font-encode group-hover:text-[#FC1F30] transition">
             Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
           </h2>
         </a>
@@ -251,6 +211,7 @@
 
       </div>
 
+      <!-- Comment Icon -->
       <button class="absolute bottom-4 right-4 text-white">
         <img src="assets/img/card/comment.svg" class="w-6 h-6 sm:w-7 sm:h-7">
       </button>
@@ -259,9 +220,10 @@
     <!-- RIGHT SMALL CARDS -->
     <div class="flex flex-col gap-6">
 
+      <!-- Small Card 1 -->
       <div class="relative rounded-lg overflow-hidden shadow-lg group">
         <img src="assets/img/card/card-2.png"
-             class="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-auto object-cover">
+             class="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[200px] object-cover">
 
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
@@ -278,7 +240,7 @@
         </div>
 
         <div class="absolute bottom-4 px-4">
-          <h3 class="text-white text-[20px] md:text-lg lg:text-xl font-encode font-semibold mb-2 leading-tight">
+          <h3 class="text-white text-lg sm:text-xl font-encode font-semibold mb-2 leading-tight">
             Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
           </h3>
 
@@ -296,7 +258,7 @@
       <!-- Small Card 2 -->
       <div class="relative rounded-lg overflow-hidden shadow-lg group">
         <img src="assets/img/card/card-3.png"
-             class="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-auto object-cover">
+             class="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[200px] object-cover">
 
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
@@ -346,6 +308,7 @@
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
+      <!-- CARD START -->
       <div class="relative rounded-lg overflow-hidden shadow-lg group">
         <img src="assets/img/card/card-4.png" 
              alt="Game" 
@@ -353,6 +316,7 @@
 
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
+        <!-- Top Badge -->
         <div class="absolute top-4 px-4 text-white flex items-center gap-2">
           <span class="bg-[#2E6EB5] text-xs font-semibold px-4 py-1 -skew-x-12">Review</span>
 
@@ -365,26 +329,27 @@
           </span>
         </div>
 
+        <!-- Bottom Content -->
         <div class="absolute bottom-4 px-4 text-white">
           <div class="flex items-center mb-2">
             <span class="font-bold text-sm md:text-base lg:text-[16px] font-oxygen mr-2">4.5</span>
 
             <div class="flex">
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+              <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
             </div>
           </div>
 
           <a href="">
-            <h2 class="text-xl md:text-xl lg:text-[24px] font-semibold leading-[26px] md:leading-[30px] lg:leading-[32px] group-hover:text-[#FC1F30] font-encode transition">
+            <h2 class="text-lg md:text-xl lg:text-[24px] font-bold leading-[26px] md:leading-[30px] lg:leading-[32px] group-hover:text-[#FC1F30] font-encode transition">
               Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer.
             </h2>
           </a>
 
-          <p class="text-xs text-[#FC1F30] font-oxygen mt-1 lg:font-bold">
+          <p class="text-xs md:text-sm text-[#FC1F30] font-oxygen mt-1 lg:font-bold">
             Writer Name <span class="text-[#D0D0D0]">| OCT 06, 2025</span>
           </p>
         </div>
@@ -395,6 +360,7 @@
       </div>
       <!-- CARD END -->
 
+      <!-- CARD 2 (same layout) -->
       <div class="relative rounded-lg overflow-hidden shadow-lg group">
         <img src="assets/img/card/card-1.png" 
              class="w-full h-64 md:h-72 lg:h-96 object-cover">
@@ -415,21 +381,19 @@
           <div class="flex items-center mb-2">
             <span class="font-bold text-sm md:text-base lg:text-[16px] mr-2">4.5</span>
             <div class="flex">
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-              <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+              <svg class="w-4 h-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/>
+              </svg>
             </div>
           </div>
 
           <a href="">
-            <h2 class="text-xl md:text-xl lg:text-[24px] font-semibold leading-[26px] md:leading-[30px] lg:leading-[32px] group-hover:text-[#FC1F30] font-encode transition">
+            <h2 class="text-lg md:text-xl lg:text-[24px] font-bold leading-[26px] md:leading-[30px] lg:leading-[32px] group-hover:text-[#FC1F30] font-encode transition">
               Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer.
             </h2>
           </a>
 
-          <p class="text-xs text-[#FC1F30] font-oxygen mt-1 lg:font-bold">
+          <p class="text-xs md:text-sm text-[#FC1F30] font-oxygen mt-1 lg:font-bold">
             Writer Name <span class="text-[#D0D0D0]">| OCT 06, 2025</span>
           </p>
         </div>
@@ -446,7 +410,7 @@
 
     
   <section class="w-full">
-    <div class="2xl:px-[4vw] lg:px-[4vw] px-4 md:px-4 py-6">
+    <div class=" 2xl:px-[4vw] lg:px-[4vw] px-4 md:px-4 py-6">
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-gray-200 gap-6">
         <div class="relative overflow-hidden">
@@ -471,17 +435,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -514,17 +478,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -556,17 +520,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -598,17 +562,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -640,17 +604,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -682,17 +646,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -705,7 +669,7 @@
 
     </div>
 
-        <div class="flex items-center justify-center pt-6 pb-12">
+        <div class="flex items-center justify-center py-12">
             <button
                 class="flex items-center justify-center font-oxygen font-bold text-sm md:text-[18px] text-[#FC1F30] hover:text-[#e01a28] transition-colors duration-200"
             >
@@ -743,17 +707,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -786,17 +750,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -828,17 +792,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -870,17 +834,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -912,17 +876,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -954,17 +918,17 @@
                 <div class="flex items-center mb-2">
                     <span class="text-[#111D2C] font-bold font-oxygen leading-[24px] lg:text-[16px] mr-2">4.5</span>
                     <div class="flex">
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                        <svg class="w-4 h-4 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                     </div>
                 </div>
                 <a href="#">
-                    <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
+                    <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#111D2C] font-encode font-semibold leading-[30px] transition-colors">
                         Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                    </h3>
+                    </h2>
                 </a>
                 <div class="flex justify-between items-center mb-2">
                     <p class="text-xs text-[#FC1F30] font-bold font-oxygen leading-[18px]">Writer Name <span class="text-[#112A45] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -977,7 +941,7 @@
 
     </div>
 
-        <div class="flex items-center justify-center pt-6 pb-12">
+        <div class="flex items-center justify-center py-12">
             <button
                 class="flex items-center justify-center font-oxygen font-bold text-sm md:text-[18px] text-[#FC1F30] hover:text-[#e01a28] transition-colors duration-200"
             >
@@ -1016,11 +980,11 @@
                                 <div class="flex items-center mb-3">
                                 <span class="text-[#FFFFFF] font-bold text-[16px] lg:text-[20px] lg:leading-[30px] leading-[24px] mr-2">4.5</span>
                                 <div class="flex">
-                                    <svg class="w-6 h-6 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                                    <svg class="w-6 h-6 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                                    <svg class="w-6 h-6 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                                    <svg class="w-6 h-6 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
-                                    <svg class="w-6 h-6 text-[#FAAD14]" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
+                                    <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09L5.6 11.545 1 7.91l6.062-.908L10 2l2.938 5.002 6.062.908-4.6 3.635 1.478 6.545z"/></svg>
                                 </div>
                                 </div>
 
@@ -1037,7 +1001,10 @@
                                 <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
                             </button>
                         </div>
-                    <div class="relative overflow-hidden">
+                        
+                        <div class="w-full">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="relative overflow-hidden">
                         <img src="assets/img/card/card-4.png" alt="Game" class="w-full h-[214px] rounded-lg md:h-56 object-cover">
                         
                         <div class="absolute top-4 left-4 text-white flex items-center gap-2">
@@ -1058,9 +1025,9 @@
                         </div>
                         <div class="text-white py-4">
                             <a href="#">
-                                <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
+                                <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
                                     Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                                </h3>
+                                </h2>
                             </a>
                             <div class="flex justify-between items-center mb-2">
                                 <p class="text-xs text-[#FC1F30] font-oxygen font-bold leading-[18px]">Writer Name <span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -1091,9 +1058,9 @@
                         </div>
                         <div class="text-white py-4">
                             <a href="#">
-                                <h3 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
+                                <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
                                     Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                                </h3>
+                                </h2>
                             </a>
                             <div class="flex justify-between items-center mb-2">
                                 <p class="text-xs text-[#FC1F30] font-oxygen font-bold leading-[18px]">Writer Name <span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
@@ -1103,130 +1070,134 @@
                             </div>
                         </div>
                     </div>
+                        </div>
+                        </div>
 
-                    
+
 
                     </div>
                 </div>
 
                 
-                <div class="flex flex-col lg:border-l lg:border-gray-700 px-0 lg:px-6 mb-6">
+                <div class="w-full">
+                    <div class="grid grid-cols-1 lg:border-l lg:border-gray-700 px-0 lg:px-6 mb-6">
                 
-                    <div class="border-b border-gray-700 mb-6 pb-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
+                        <div class="border-b border-gray-700 mb-6 pb-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
 
-                            <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
-                            <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
-                            </span>
-
-                            <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
-                            <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
-                            </span>
-                        </div>
-
-                        <a href="#" class="block mb-4">
-                            <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
-                                Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                            </h2>
-                        </a>
-
-                        <div class="flex justify-between items-center">
-                            <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
-                            <button>
-                                <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="border-b border-gray-700 mb-6 pb-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
-
-                            <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
-                            <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
-                            </span>
-
-                            <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
-                            <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
-                            </span>
-                        </div>
-
-                        <a href="#" class="block mb-4">
-                            <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
-                                Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                            </h2>
-                        </a>
-
-                        <div class="flex justify-between items-center">
-                            <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
-                            <button>
-                                <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="border-b border-gray-700 mb-6 pb-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
-
-                            <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
-                            <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
-                            </span>
-
-                            <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
-                            <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
-                            </span>
-                        </div>
-
-                        <a href="#" class="block mb-4">
-                            <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
-                                Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                            </h2>
-                        </a>
-
-                        <div class="flex justify-between items-center">
-                            <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
-                            <button>
-                                <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mb-6 pb-6">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
-
-                            <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
+                                <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
                                 <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
-                            </span>
+                                </span>
 
-                            <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
+                                <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
                                 <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
-                            </span>
+                                </span>
+                            </div>
+
+                            <a href="#" class="block mb-4">
+                                <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
+                                    Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                                </h2>
+                            </a>
+
+                            <div class="flex justify-between items-center">
+                                <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
+                                <button>
+                                    <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
+                                </button>
+                            </div>
                         </div>
 
-                        <a href="#" class="block mb-4">
-                            <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
-                                Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
-                            </h2>
-                        </a>
+                        <div class="border-b border-gray-700 mb-6 pb-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
 
-                        <div class="flex justify-between items-center">
-                            <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
-                            <button>
-                                <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
-                            </button>
+                                <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
+                                <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
+                                </span>
+
+                                <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
+                                <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
+                                </span>
+                            </div>
+
+                            <a href="#" class="block mb-4">
+                                <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
+                                    Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                                </h2>
+                            </a>
+
+                            <div class="flex justify-between items-center">
+                                <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
+                                <button>
+                                    <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
+                                </button>
+                            </div>
                         </div>
+
+                        <div class="border-b border-gray-700 mb-6 pb-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
+
+                                <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
+                                <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
+                                </span>
+
+                                <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
+                                <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
+                                </span>
+                            </div>
+
+                            <a href="#" class="block mb-4">
+                                <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
+                                    Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                                </h2>
+                            </a>
+
+                            <div class="flex justify-between items-center">
+                                <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
+                                <button>
+                                    <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 pb-6">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-[#2E6EB5] text-[#FFFFFF] text-sm font-bold font-oxygen px-4 py-1 -skew-x-12">Review</span>
+
+                                <span class="bg-[#374151] text-[#FFFFFF] text-sm font-bold px-4 py-1 -skew-x-12 rounded-sm flex items-center gap-1">
+                                    <img src="assets/img/card/pc.svg" class="w-3 h-3" alt=""> PC
+                                </span>
+
+                                <span class="bg-[#0071D1] text-[#FFFFFF] text-sm font-bold px-2 py-[8px] -skew-x-12 flex items-center gap-1 group-hover:bg-[#FC1F30] transition-colors">
+                                    <img src="assets/img/card/play.svg" class="w-3 h-3 group-hover:invert transition-all" alt="">
+                                </span>
+                            </div>
+
+                            <a href="#" class="block mb-4">
+                                <h2 class="mb-2 text-[20px] lg:text-[20px] text-[#FFFFFF] font-encode font-semibold leading-[30px] transition-colors">
+                                    Mus luctus tincidunt sit proinurpis gravida tempor leo quis dictum integer orci quis.
+                                </h2>
+                            </a>
+
+                            <div class="flex justify-between items-center">
+                                <p><span class="text-[#D0D0D0] text-xs font-normal font-oxygen">| OCT 06, 2025</span></p>
+                                <button>
+                                    <img src="assets/img/card/comment.svg" class="text-[#111D2C]">
+                                </button>
+                            </div>
+                        </div>
+
+
                     </div>
-
-
                 </div>
 
                 
             </div>
 
-                <div class="flex items-center justify-center pt-6 pb-12">
+                <div class="flex items-center justify-center py-12">
                     <button
                         class="flex items-center justify-center font-oxygen font-bold text-sm md:text-[18px] text-[#fff] hover:text-[#ddd] transition-colors duration-200"
                     >
@@ -1448,7 +1419,7 @@
 
                 </div>
                 </div>
-                <div class="flex items-center justify-center pt-6 pb-12">
+                <div class="flex items-center justify-center py-12">
                     <button
                         class="flex items-center justify-center font-oxygen font-bold text-sm md:text-[18px] text-[#FC1F30] hover:text-[#FC1F30] transition-colors duration-200"
                     >
@@ -1459,7 +1430,7 @@
                 </div>
                 <div class="w-full">
                     <h2 class="text-[#111D2C] font-encode font-bold text-[20px] lg:text-[30px] mb-4">Trending Stories</h2>
-                <div class="grid grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-2 lg:grid-cols-2 gap-4">
                     <div class="relative overflow-hidden justify-between">
                         <img src="assets/img/card/card-4.png" alt="Game" class="w-full h-auto rounded-lg lg:h-[89px] object-cover">
                         
@@ -1469,14 +1440,14 @@
                         
                         <div class="text-white py-4 items-center justify-center">
                             <a href="#">
-                                <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-oxygen font-bold leading-[24px] items-center justify-center">
+                                <h2 class="mb-2 text-sm lg:text-[16px] text-[#111D2C] font-encode font-bold leading-[24px] items-center justify-center">
                                     Mus luctus tincidunt sit proinurpis gravida tempor leo.
                                 </h2>
                             </a>
                             <div class="flex justify-between items-center mb-2">
                                 <p><span class="text-[#112A45] text-xs font-normal font-oxygen">OCT 06, 2025</span></p>
                                 <button class=" text-[#111D2C]">
-                                    <img src="assets/img/card/comment-dark.svg">
+                                    <img src="assets/img/card/comment-dark.svg" class="text-[#111D2C]">
                                 </button>
                             </div>
                         </div>
@@ -1567,10 +1538,10 @@
 
       <!-- Social Icons -->
       <div class="flex items-center justify-center md:justify-start space-x-4 mb-6 ">
-        <a href="#" class=""><img src="assets/img/social/facebook.svg" class="w-6 h-6"></a>
-        <a href="#" class=""><img src="assets/img/social/x.svg" class="w-6 h-6"></a>
-        <a href="#" class=""><img src="assets/img/social/insta.svg" class="w-6 h-6"></a>
-        <a href="#" class=""><img src="assets/img/social/youtube.svg" class="w-6 h-6"></a>
+        <a href="#" class="hover:text-red-500"><img src="assets/img/facebook.png" class="w-6 h-6"></a>
+        <a href="#" class="hover:text-red-500"><img src="assets/img/x.png" class="w-6 h-6"></a>
+        <a href="#" class="hover:text-red-500"><img src="assets/img/insta.png" class="w-6 h-6"></a>
+        <a href="#" class="hover:text-red-500"><img src="assets/img/youtube.png" class="w-6 h-6"></a>
       </div>
 
       <!-- Footer Links -->
