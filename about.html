@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | GamesCreed</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            encode: ['Encode'],
+            oxygen: ['Oxygen'],
+            inter: ['Inter'],
+          },
+          keyframes: {
+            'fade-in': {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            'fade-in': 'fade-in 0.3s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+<body>
+
+<div class="w-full shadow-md bg-[#111D2C] relative z-50">
+
+  <header class="flex items-center justify-between px-4 sm:px-5 md:px-6 lg:px-[4vw] py-4">
+
+    <a href="#" class="text-xl font-bold">
+      <img src="assets/img/logo-light.png" alt="GamesCreed Logo" class="h-10 lg:h-[60px]">
+    </a>
+
+    <nav class="hidden lg:flex md:space-x-2 lg:space-x-4 xl:space-x-6 text-white font-encode text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-medium relative">
+
+      <div class="relative group">
+        <button class="flex items-center gap-1">
+          Platforms
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:rotate-180"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div class="absolute left-0 mt-6 w-48 bg-[#1B2A3B] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-2 text-[16px] md:text-[18px] lg:text-[24px] text-white hover:bg-[#2C3E55] hover:text-[#FC1F30]">Items One</a>
+          <a href="#" class="block px-4 py-2 text-[16px] md:text-[18px] lg:text-[24px] text-white hover:bg-[#2C3E55] hover:text-[#FC1F30]">Items Two</a>
+        </div>
+      </div>
+        <a href="#"
+        class="relative hover:text-[#FC1F30]
+                after:content-[''] after:absolute after:bottom-[-28px]
+                after:left-1/2 after:-translate-x-1/2
+                after:w-0 hover:after:w-full
+                after:h-[3px] after:bg-[#FC1F30]
+                after:transition-all after:duration-300 after:ease-out">
+        News
+        </a>
+
+        <a href="#"
+        class="relative hover:text-[#FC1F30]
+                after:content-[''] after:absolute after:bottom-[-28px]
+                after:left-1/2 after:-translate-x-1/2
+                after:w-0 hover:after:w-full
+                after:h-[3px] after:bg-[#FC1F30]
+                after:transition-all after:duration-300 after:ease-out">
+        Reviews
+        </a>
+
+        <a href="#"
+        class="relative hover:text-[#FC1F30]
+                after:content-[''] after:absolute after:bottom-[-28px]
+                after:left-1/2 after:-translate-x-1/2
+                after:w-0 hover:after:w-full
+                after:h-[3px] after:bg-[#FC1F30]
+                after:transition-all after:duration-300 after:ease-out">
+        Blogs
+        </a>
+
+        <a href="#"
+        class="relative hover:text-[#FC1F30]
+                after:content-[''] after:absolute after:bottom-[-28px]
+                after:left-1/2 after:-translate-x-1/2
+                after:w-0 hover:after:w-full
+                after:h-[3px] after:bg-[#FC1F30]
+                after:transition-all after:duration-300 after:ease-out">
+        Anime
+        </a>
+
+        <a href="#"
+        class="relative hover:text-[#FC1F30]
+                after:content-[''] after:absolute after:bottom-[-28px]
+                after:left-1/2 after:-translate-x-1/2
+                after:w-0 hover:after:w-full
+                after:h-[3px] after:bg-[#FC1F30]
+                after:transition-all after:duration-300 after:ease-out">
+        Entertainment
+        </a>
+
+        <a href="#"
+        class="relative hover:text-[#FC1F30]
+                after:content-[''] after:absolute after:bottom-[-28px]
+                after:left-1/2 after:-translate-x-1/2
+                after:w-0 hover:after:w-full
+                after:h-[3px] after:bg-[#FC1F30]
+                after:transition-all after:duration-300 after:ease-out">
+        Trending
+        </a>
+
+
+     
+    </nav>
+
+    <div class="flex items-center space-x-3">
+
+      <a href="#">
+        <img src="assets/img/search.png" width="24" height="24" alt="Search">
+      </a>
+
+      <div class="flex space-x-1 border border-[#334459] py-[2px] px-[3px] rounded-[8px]">
+        <a href="#"><img src="assets/img/weather.png" width="24" height="24" alt="Weather"></a>
+        <a href="#"><img src="assets/img/dark.png" width="24" height="24" alt="Dark Mode"></a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden z-20">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+
+  <div id="mobileMenu"
+    class="fixed top-0 left-0 w-full h-full bg-[#111D2C] z-40 transform -translate-x-full transition-transform duration-300 lg:hidden flex flex-col">
+
+    <div class="flex items-center justify-between px-4 py-4 border-b border-[#334459]">
+      <img src="assets/img/logo-light.png" class="h-10">
+
+      <button id="closeBtn">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col space-y-6 px-6 pt-8 text-white font-encode text-[20px] font-medium">
+
+      <div class="w-full">
+        <button id="platformsToggle" class="flex items-center justify-between w-full">
+          Platforms
+          <svg id="arrowIcon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div id="platformsMenu"
+          class="max-h-0 overflow-hidden transition-all duration-500 flex flex-col pl-4 mt-2 space-y-3">
+          <a href="#" class="hover:text-[#FC1F30]">Items One</a>
+          <a href="#" class="hover:text-[#FC1F30]">Items Two</a>
+        </div>
+      </div>
+
+      <a href="#" class="hover:text-[#FC1F30]">News</a>
+      <a href="#" class="hover:text-[#FC1F30]">Reviews</a>
+      <a href="#" class="hover:text-[#FC1F30]">Blogs</a>
+      <a href="#" class="hover:text-[#FC1F30]">Anime</a>
+      <a href="#" class="hover:text-[#FC1F30]">Entertainment</a>
+      <a href="#" class="hover:text-[#FC1F30]">Trending</a>
+
+    </nav>
+  </div>
+
+</div>
+  
+<section class="w-full">
+  <div class="2xl:px-[4vw] px-4 md:px-4 lg:px-[4vw] py-6">
+    
+    <!-- Section Title -->
+    <h1 class="text-[#111D2C] font-encode font-semibold text-[36px] lg:text-[48px] lg:leading-[60px] mb-4">
+      About GamesCreed
+    </h1>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="col-span-1 md:col-span-2 lg:col-span-2">
+            <div class="space-y-[12px] mb-12 relative border-0 md:border-r md:border-[#DEDEDE] pr-0 md:pr-4 lg:pr-6">
+                <p class="text-[#111D2C] text-[16px] lg:text-[16px] leading-6 font-oxygen font-normal">Ut sed tellus neque sit cursus nulla suspendisse. Ultrices est cras amet sit faucibus nibh sem. Pretium habitant tempus in pharetra adipiscing commodo. Vestibulum ornare amet tempus sed in morbi aenean quam. Sed sit consequat faucibus proin faucibus adipiscing tempus ullamcorper mollis. Lobortis mi ut velit maecenas facilisi ut tincidunt duis nisl. Justo turpis massa magna faucibus elit a scelerisque cras in. Nulla odio sollicitudin at tristique enim pretium maecenas viverra sed.</p>
+                <p class="text-[#111D2C] text-[16px] lg:text-[16px] leading-6 font-oxygen font-normal">Ipsum molestie nunc quis lacus malesuada bibendum quam commodo. Sit viverra consectetur non nibh. Lectus pretium tempus ut pulvinar. Risus ligula tempus sodales diam sit eget. Sem pretium mauris congue ut ultrices quisque id curabitur. Curabitur feugiat arcu massa nisl lobortis sagittis gravida cras. Vestibulum malesuada elit bibendum sit elit vel pulvinar arcu. Amet cras semper elit lacus. Proin scelerisque mauris nunc phasellus arcu mauris tortor donec.</p>
+                <p class="text-[#111D2C] text-[16px] lg:text-[16px] leading-6 font-oxygen font-normal">Ultricies consequat eget ut a interdum a blandit. At nulla molestie diam at nec ultrices tincidunt eu. At enim accumsan massa in eget volutpat. Facilisi tempus ornare mattis malesuada lorem tristique sit cras quam. Mauris lectus mauris sit sagittis a lacus a vulputate tempor.</p>
+                <p class="text-[#111D2C] text-[16px] lg:text-[16px] leading-6 font-oxygen font-normal">Quam sed lectus purus a at id. Etiam mattis sagittis commodo habitasse quam quis malesuada. Velit tempus molestie tellus sollicitudin cursus hac elementum nisl pharetra. Nunc eget lorem tristique non molestie mi ut sagittis. Aliquam nunc in scelerisque in a viverra sed eleifend.</p>
+            </div>
+        </div>
+        <div class="w-full relative">
+            <div class="px-2">
+                <h2 class="text-[#111D2C] text-[20px] lg:text-[20px] font-encode font-semibold leading-[30px]">Find Us on Social</h2>
+                <div class="flex gap-4 py-6">
+                    <a href="#"><img src="assets/img/social/fb-red.svg" class="w-[30px] h-[30px]" /></a>
+                    <a href="#"><img src="assets/img/social/x-red.svg" class="w-[30px] h-[30px]" /></a>
+                    <a href="#"><img src="assets/img/social/insta-red.svg" class="w-[30px] h-[30px]" /></a>
+                    <a href="#"><img src="assets/img/social/yt-red.svg" class="w-[30px] h-[30px]" /></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+<footer class="bg-[#111D2C]">
+  <div class="2xl:px-[4vw] lg:px-[4vw] text-white py-10 px-6 md:px-12">
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 px-4 text-center md:text-left">
+    
+    <!-- Left Section -->
+    <div class="flex flex-col items-center md:items-start">
+      <!-- Logo -->
+      <a href="#" class="mb-6">
+        <img src="assets/img/footer-logo.png" alt="GamesCreed Logo" class="h-[70px] mx-auto md:mx-0">
+      </a>
+
+      <!-- Social Icons -->
+      <div class="flex items-center justify-center md:justify-start space-x-4 mb-6 ">
+        <a href="#" class=""><img src="assets/img/social/facebook.svg" class="w-6 h-6"></a>
+        <a href="#" class=""><img src="assets/img/social/x.svg" class="w-6 h-6"></a>
+        <a href="#" class=""><img src="assets/img/social/insta.svg" class="w-6 h-6"></a>
+        <a href="#" class=""><img src="assets/img/social/youtube.svg" class="w-6 h-6"></a>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-3 md:text-[20px] text-sm font-encode font-medium">
+        <a href="#" class="hover:text-gray-300">About Us</a>
+        <a href="#" class="hover:text-gray-300">Contact</a>
+        <a href="#" class="hover:text-gray-300">Terms of Service</a>
+        <a href="#" class="hover:text-gray-300">Advertising</a>
+        <a href="#" class="text-[#FC1F30] text-sm md:text-[20px] font-bold">NoobFeed</a>
+        <a href="#" class="text-[#FC1F30] text-sm md:text-[20px] font-bold">CritOP</a>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="md:w-1/2 lg:w-1/3 flex flex-col items-center md:items-start font-encode">
+      <h3 class="text-[24px] md:text-3xl font-semibold mb-2 text-[#FFFFFF] font-encode">Always Stay Up to Date</h3>
+      <p class="mb-4 text-[#BEBEBE] text-sm font-oxygen font-[400]">
+        Subscribe to our newsletter to get our newest articles instantly!
+      </p>
+
+      <!-- Newsletter Form -->
+      <form class="flex flex-col sm:flex-row items-center sm:items-stretch gap-3 w-full max-w-md">
+        <div class="relative w-full sm:flex-1">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+            <img src="assets/img/mail_outline.png" class="w-5 h-5">
+          </span>
+          <input
+            type="email"
+            placeholder="Your Email Address..."
+            class="w-full bg-transparent border border-gray-600 font-encode rounded-lg pl-10 pr-4 py-2 text-sm focus:outline-none placeholder-[#BEBEBE]"
+          >
+        </div>
+        <button type="submit"
+          class="w-full md:w-auto bg-[#FC1F30] hover:bg-[#FC1F30] transition-colors px-6 py-2 rounded-lg text-[#BEBEBE] text-sm font-inter font-[400]"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="2xl:px-[4vw] lg:px-[4vw] text-white py-10 px-6 md:px-12">
+    <div class="px-4">
+        <p class="text-sm text-[#E8E8E8] font-encode font-bold">
+            GamesCreed © 2025. All Rights Reserved.
+        </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('-translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+    });
+
+    // Mobile Platforms submenu toggle
+    const toggle = document.getElementById('platformsToggle');
+    const submenu = document.getElementById('platformsMenu');
+    const arrow = document.getElementById('arrowIcon');
+
+    toggle.addEventListener('click', () => {
+    if (submenu.classList.contains('max-h-0')) {
+        submenu.classList.remove('max-h-0');
+        submenu.classList.add('max-h-40'); // expands smoothly
+        arrow.classList.add('rotate-180');
+    } else {
+        submenu.classList.add('max-h-0');
+        submenu.classList.remove('max-h-40');
+        arrow.classList.remove('rotate-180');
+    }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
